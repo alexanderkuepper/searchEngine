@@ -1,3 +1,0 @@
-C:/Users/Alex/Desktop/searchEngine/cmake-build-debug/CMakeFiles/SearchEngine.dir
-C:/Users/Alex/Desktop/searchEngine/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Alex/Desktop/searchEngine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
