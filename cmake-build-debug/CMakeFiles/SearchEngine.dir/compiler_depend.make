@@ -195,6 +195,9 @@ CMakeFiles\SearchEngine.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Stu
 CMakeFiles\SearchEngine.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\__msvc_bit_utils.hpp"
 CMakeFiles\SearchEngine.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xbit_ops.h"
 CMakeFiles\SearchEngine.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xnode_handle.h"
+CMakeFiles\SearchEngine.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\queue"
+CMakeFiles\SearchEngine.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\algorithm"
+CMakeFiles\SearchEngine.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\deque"
 
 
 
@@ -429,3 +432,7 @@ C:\Users\Alex\Desktop\searchEngine\main.cpp:
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\list":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xbit_ops.h":
+
+"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\queue":
+
+"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\deque":

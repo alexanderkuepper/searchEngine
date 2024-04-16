@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <vector>
 #include <memory>
+#include <queue>
 
 struct TrieNode {
     const std::string *validWord = nullptr;
@@ -31,19 +32,22 @@ struct TrieNode {
 
     std::vector<const std::string *> findWordsWIthPrefix(const std::string &prefix) {
         TrieNode *prefixNode = findPrefixNode(prefix);
-        std::vector<TrieNode *> trieNodes{};
+        std::queue<TrieNode *> trieNodes{};
         std::vector<const std::string *> prefixWords{};
+
         if (prefixNode == nullptr) {
             return prefixWords;
         }
-        trieNodes.push_back(prefixNode);
-        for (auto index = 0; index < trieNodes.size(); index++) {
-            for (auto const &[key, childNode]: trieNodes[index]->childNodes) {
-                trieNodes.push_back(childNode.get());
+        trieNodes.push(prefixNode);
+        while (!trieNodes.empty()) {
+            TrieNode *currentNode = trieNodes.front();
+            for (auto const &[key, childNode]: currentNode->childNodes) {
+                trieNodes.push(childNode.get());
                 if (childNode->validWord != nullptr) {
                     prefixWords.push_back(childNode->validWord);
                 }
             }
+            trieNodes.pop();
         }
         return prefixWords;
     }
@@ -63,8 +67,8 @@ int main() {
     for (auto &word: words_to_insert) {
         trie.insertWord(word);
     }
-    auto x = trie.findWordsWIthPrefix("appli");
-    for (auto y: x) {
-        std::cout << *y << std::endl;
+    auto words = trie.findWordsWIthPrefix("ap");
+    for (auto word: words) {
+        std::cout << *word << std::endl;
     }
 }
