@@ -19,9 +19,9 @@ struct TrieNode {
         node->validWord = &word;
     }
 
-    TrieNode *findPrefixNode(const std::string &word) {
+    TrieNode *findPrefixNode(const std::string &prefix) {
         TrieNode *node = this;
-        for (auto letter: word) {
+        for (auto letter: prefix) {
             if (node->childNodes.find(letter) == node->childNodes.end()) {
                 return nullptr;
             }
@@ -30,7 +30,7 @@ struct TrieNode {
         return node;
     }
 
-    std::vector<const std::string *> findWordsWIthPrefix(const std::string &prefix) {
+    std::vector<const std::string *> findWordsWithPrefix(const std::string &prefix) {
         TrieNode *prefixNode = findPrefixNode(prefix);
         std::queue<TrieNode *> trieNodes{};
         std::vector<const std::string *> prefixWords{};
@@ -67,7 +67,7 @@ int main() {
     for (auto &word: words_to_insert) {
         trie.insertWord(word);
     }
-    auto words = trie.findWordsWIthPrefix("ap");
+    auto words = trie.findWordsWithPrefix("ap");
     for (auto word: words) {
         std::cout << *word << std::endl;
     }
